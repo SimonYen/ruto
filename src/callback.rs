@@ -45,8 +45,8 @@ pub fn delete_todo(s: &mut Cursive) {
 }
 
 /*callback function called when todo has been pressed*/
-pub fn on_submit(s: &mut Cursive, todo: &str) {
-    s.add_layer(Dialog::text(todo).title("TODO").button("fine", |s| {
+pub fn on_press(s: &mut Cursive, todo: &str) {
+    s.add_layer(Dialog::text(todo).title("DETAIL").button("ok", |s| {
         s.pop_layer();
     }));
 }
